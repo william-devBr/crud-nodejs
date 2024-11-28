@@ -42,6 +42,32 @@ app.post('/create-user',(req,res)=> {
    })
 })
 
+app.post('/delete/:id',(req,res) => {
+
+     const {id} = req.body;
+  
+    db.delete('users',{id : id },(err,results)=>{
+           if(err) throw console.log(`ocorreu um erro ${err}`);
+
+        console.log('usuário deletado com sucesso ');
+    })
+})
+
+app.post('/update/:id',(req,res) => {
+
+     const {name, email} = req.body; 
+
+    f(!email.length && !name.length) throw console.log('preencha os campos \"nome\" e \"email\" corretamente !');
+
+    db.update('users',{name : name, email : email , (err,results) => {
+             if(err) throw console.log(`ocorreu um erro ${err}`);
+
+              else 
+                 console.log('dados atualizados com sucesso');
+    })
+  
+})
+
 app.listen(PORT,'localhost',()=> {
   console.log(`servior rodando na porta ${PORT}`)
 })
