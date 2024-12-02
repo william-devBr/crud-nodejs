@@ -36,7 +36,7 @@ Este projeto implementa um CRUD básico utilizando um banco de dados MySQL e rot
 ## **Instalação**
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/william-devBr/crud-nodejs.git
    cd seu-repositorio
    ```
 
@@ -63,9 +63,9 @@ Este projeto implementa um CRUD básico utilizando um banco de dados MySQL e rot
 4. Configure o arquivo `.env` com suas credenciais do MySQL:
    ```plaintext
    DB_HOST=localhost
-   DB_USER=seu_usuario
-   DB_PASSWORD=sua_senha
-   DB_NAME=crud_db
+   DB_USER=root
+   DB_PASSWORD=''
+   DB_NAME=crud
    ```
 
 5. Inicie o servidor:
